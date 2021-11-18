@@ -1,11 +1,22 @@
 # Angular Multiple-module Application template
 
-Angular appliaction template, that contains basic structure for applications that use multiple modules and authentication.
+Angular application template, that contains basic structure for applications that use multiple modules and authentication.
 
 ## Authentication
 
-Basic application has authentication service, interceptor and guard for pages. Also it has default auth component with username and password fields.
+Basic architecture provides authentication service, token interceptor and auth guard. Also it has default auth page with username and password fields.
 
-## Modules structure
-
-Structure uses lazy loading of modules.
+## Suggested modules structure
+Modules should be lazy loaded. If some components need to be used in multiple different modules, you could create particular module for this component and place it to ```modules/components``` folder.
+Each module should have this folder structure:
+```
+module
+	pages
+	components
+	modules
+		shared
+			components
+			modules
+			...
+	...
+```
