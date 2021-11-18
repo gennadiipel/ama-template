@@ -1,4 +1,4 @@
-# Angular Multimodule Application template
+# Angular Multiple-module Application template
 
 Angular appliaction template, that contains basic structure for applications that use multiple modules and authentication.
 
