@@ -2,6 +2,14 @@
 
 Angular application template, that contains basic structure for applications that use multiple modules and authentication.
 
+## Installation
+
+1. Clone this repository.
+2. Run ```node rename-project```.
+3. Select new suitable name for your project.
+4. Open new folder.
+5. Use default Angular CLI commands to run / build your application.
+
 ## Authentication
 
 Basic architecture provides authentication service, token interceptor and auth guard. Also it has default auth page with username and password fields.
