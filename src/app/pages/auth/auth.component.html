@@ -1,1 +1,13 @@
-<p>auth works!</p>
+<form [formGroup]="authFormGroup" (submit)="auth()" (keyup.enter)="auth()">
+    <p>
+        <input type="text" placeholder="Username" formControlName="username">
+        <small class="error" *ngIf="authFormGroup.get('username')?.errors?.required && authFormGroup.get('username')?.touched">This field is required.</small>
+    </p>
+    <p>
+        <input type="password" placeholder="Password" formControlName="password">
+        <small class="error" *ngIf="authFormGroup.get('password')?.errors?.required && authFormGroup.get('password')?.touched">This field is required.</small>
+    </p>
+    <p>
+        <button type="submit" [disabled]="isFormSent || authFormGroup.invalid">Log in</button>
+    </p>
+</form>

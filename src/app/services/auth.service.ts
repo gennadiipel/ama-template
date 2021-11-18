@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
+import { Observable, switchMap, tap } from "rxjs";
+import { environment } from "src/environments/environment";
 import { AuthForm, AuthResponse } from "../interfaces/auth.interface";
 
 @Injectable({providedIn: 'root'})
@@ -36,7 +37,14 @@ export class AuthService {
     }
 
 
-    // login(authForm: AuthForm): Observable<AuthResponse> {
-    //     return this._httpClient.post()
-    // }
+    login(authForm: AuthForm): Observable<AuthResponse> {
+        return this._httpClient.post<AuthResponse>(`${environment.apiUrl}/jwt-auth/v1/token`, authForm)
+        .pipe(
+            tap((response: AuthResponse) => {
+                this.token = response.token
+            }, (error) => {
+                this.eraseToken()
+            })
+        )
+    }
 }

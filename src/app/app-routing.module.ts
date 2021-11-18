@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'auth', component: AuthComponent },
   
   { path: '', loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule), canActivate: [AuthGuard] },
+  
 ];
 
 @NgModule({
