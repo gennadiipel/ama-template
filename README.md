@@ -8,7 +8,8 @@ Angular application template, that contains basic structure for applications tha
 2. Run ```node rename-project```.
 3. Select new suitable name for your project.
 4. Open new folder.
-5. Use default Angular CLI commands to run / build your application.
+5. Run ```npm install```.
+6. Use default Angular CLI commands to run / build your application.
 
 ## Authentication
 
