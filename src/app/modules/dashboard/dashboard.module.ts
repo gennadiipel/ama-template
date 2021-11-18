@@ -15,7 +15,7 @@ import { RouterModule } from '@angular/router';
     SharedModule,
 
     /**
-     * Dashboard module is given as an example module. It provides some roots below.
+     * Dashboard module is given as an example module. It provides some routes below.
      * 
      * TemplateComponent is a component that contains common parts of the page layout.
      * OffersComponent is given here as an example.
